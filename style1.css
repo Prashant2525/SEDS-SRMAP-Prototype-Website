@@ -1,0 +1,428 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
+@import './variables.css';
+@import './utilities.css';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--pure);
+}
+
+header{
+    background-color: #1a1d24;
+    background: linear-gradient(135deg ,rgba(0,0,0,1),rgba(0,0,0,0.2)),
+    url(logo-space2.jpg);
+    min-height: 100vh;
+    background-size: cover;
+}
+.container{
+    max-width: 98rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1.5rem;
+    
+}
+.nav-list{
+    position: relative;
+    display: flex;
+    list-style: none;
+}
+.nav-item{
+    min-width: 10rem;
+    text-align: center;
+    padding-block: 1rem;
+}
+.nav-link{
+    text-transform: uppercase;
+    color: #fff;
+}
+.active{
+    position: absolute;
+    bottom: -1rem;
+    height: 2px;
+    width: 10rem;
+    background-color: #fff;
+    transition: transform 0.25s;
+}
+.nav-item:nth-child(2):hover ~ .active{
+    transform: translateX(10rem);
+}
+.nav-item:nth-child(3):hover ~ .active{
+    transform: translateX(20rem);
+}
+.nav-item:nth-child(4):hover ~ .active{
+    transform: translateX(30rem);
+}
+.nav-item:nth-child(5):hover ~ .active{
+    transform: translateX(40rem);
+}
+.nav-item:nth-child(6):hover ~ .active{
+    transform: translateX(50rem);
+}
+.logo img{
+    border-radius: 50%;
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.intro .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 25px;
+  padding-right: 25px;
+  min-height: calc(60vh);
+}
+.intro .col-2{        /* not working*/
+  flex-basis: 50%;
+  min-width: 200px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.intro .row >div{
+    flex: 1;
+}
+.intro .col-2 h1{
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+.intro .col-2 p{
+    font-weight: lighter;
+    margin-bottom: 25px;
+    font-size: larger;
+}
+.intro .col-2 {
+    padding: 0 60px 0 30px;
+}
+
+.carousel-six-images{
+  max-width: 50%;
+  position: relative;
+}
+
+.carousel-six-images img {
+  width: 50vh;
+  height: 50vh;
+  border-radius: 50%;
+  margin-top: 10%;
+}
+.carousel-six-images .changing {
+    position:absolute;
+    opacity:0;
+    top:0;
+    left:0;
+}
+.carousel-six-images .two{
+    animation:animate-six-two 15s infinite forwards linear;
+}
+.carousel-six-images .three{
+    animation:animate-six-three 15s infinite forwards linear;
+}
+.carousel-six-images .four{
+    animation:animate-six-four 15s infinite forwards linear;
+}
+.carousel-six-images .five{
+    animation:animate-six-five 15s infinite forwards linear;
+}
+.carousel-six-images .six{
+    animation:animate-six-six 15s infinite forwards linear;
+}
+
+@keyframes animate-six-two
+{
+    0%	{opacity:0;}
+    15% {opacity:0;}
+    20% {opacity:1;}
+    90% {opacity:1;}
+    95% {opacity:0;}
+}
+@keyframes animate-six-three
+{
+    0% {opacity:0;}
+    35% {opacity:0;}
+    40% {opacity:1;}
+    90% {opacity:1;}
+    95% {opacity:0;}
+}
+@keyframes animate-six-four
+{
+    0% {opacity:0;}
+    55% {opacity:0;}
+    60% {opacity:1;}
+    90% {opacity:1;}
+    95% {opacity:0;}
+}
+@keyframes animate-six-five
+{
+    0% {opacity:0;}
+    75% {opacity:0;}
+    80% {opacity:1;}
+    95% {opacity:1;}
+    100% {opacity:0;}
+}
+@keyframes animate-six-six
+{
+    0% {opacity:0;}
+    75% {opacity:0;}
+    80% {opacity:1;}
+    95% {opacity:1;}
+    100% {opacity:0;}
+}
+section.content{
+    background: linear-gradient(135deg ,rgba(0,0,0,1),rgba(0,0,0,0.2)),
+    url(telescope.jpg);
+    padding: 50px;
+    background-size: cover;
+    text-align: center;
+    background-color: #1a1d24;
+    min-height: 80vh;
+}
+.about-seds h3{
+    font-weight: 300;
+    font-size: 40px;
+    margin-bottom: 0;
+    color: var(--pure);
+}
+.content .about-seds img{
+    vertical-align: middle;
+    border: 0;
+    max-height: 100%;
+}
+.about-seds p{
+    overflow-wrap: break-word;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+section.content2{
+    background: linear-gradient(135deg ,rgba(0,0,0,1),rgba(0,0,0,0.2)),
+    url(space1.png);
+    padding: 50px;
+    background-size: cover;
+    text-align: center;
+    background-color: #1a1d24;
+    min-height: 80vh;
+}
+.ev-h{
+    font-weight: 400;
+    font-size: 40px;
+    margin-bottom: 0px;
+    color: var(--pure);
+}
+.content3{
+    max-width: 110re;
+    padding: 1.5rem;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1.5rem;
+}
+.card{
+    background: var(--dark);
+    color: var(--pure);
+    padding: 1.5rem;
+    overflow: hidden;
+    border-radius: 0.8rem;
+}
+.card-title-large{
+    font-family: fantasy, sam-serif;
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    color:#1d1d1d;
+    transform: translateX(7rem);
+    transition: transform 3.5s;
+}
+.card-title-small{
+    margin-bottom: 1rem;
+}
+.card-description{
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+.card-cta{
+    display: inline-block;
+    width: 1.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+}
+.card:hover .card-cta{
+    background-color: #262525;
+}
+.card:hover .card-title-large{
+    transform: translateX(-115%);
+    color: #fff;
+}
+.card.events1:hover{
+    background-color:coral;
+}
+.card.events2:hover{
+    background-color: darkcyan;
+    /*background: radial-gradient(
+        at 20% 128%,
+        #feda78 20%,
+        #e23457 60%,
+        #ac2bb3 90%
+    );*/
+}
+.card.events3:hover{
+    background-color:rosybrown;
+}
+.card.events4:hover{
+    background-color:darkolivegreen;
+}
+
+/*---------About----------*/
+
+.about-main{
+    background-color: var(--dark);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Footer*/
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+  }
+
+ .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+  }
+  .footer-col-2{
+    flex: 1;
+    text-align: center;
+  }
+  .footer-col-2 img{
+    width: 480px;
+    margin-bottom: 20px;
+  }
+  .footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+  }
+  ul{
+    list-style-type: none;
+  }
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+  }
+.copyright{
+    text-align: center;
+}
+.footer-col-3 h3{
+    color: var(--pure);
+}
+.footer-col-4 h3{
+    color: var(--pure);
+}
+.about-container{
+    background: linear-gradient(135deg ,rgba(0,0,0,1),rgba(0,0,0,0.2)),
+    url(about-space.jpg);
+    padding: 50px;
+    background-size: cover;
+    text-align: center;
+    background-color: #1a1d24;
+    min-height: 80vh;
+}
+.main{
+    margin-top: 100%;
+}
+.group{
+    padding-top: 50px;
+    text-align: center;
+}
+header .about-main{
+    background-color: #1a1d24;
+    background: linear-gradient(135deg ,rgba(0,0,0,1),rgba(0,0,0,0.2)),
+    url(logo-space2.jpg);
+    min-height: 1vh;
+    background-size: cover;
+
+}
+
+/* media query for less than 600 screen size*/
+@media only screen and (max-width: 600px){
+  .row{
+    text-align: center;
+  }
+  .col-2, .col-3, .col-4{
+    flex-basis: 100%;
+  }
+  .single-product .row{
+    text-align: left;
+  }
+  .single-product .col-2{
+    padding: 20px 0;
+  }
+  .single-product h1{
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .cart-info p{
+    display: none;
+  }
+
+}
+
+.news1{
+    background-color: #000;
+    display: flex;
+    background-size: cover;
+    width: fit-content;
+    height: 1000px;
+}
+
